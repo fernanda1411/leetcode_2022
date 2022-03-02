@@ -26,6 +26,7 @@ Constraints:
 
 1 <= bad <= n <= 231 - 1
 
+https://leetcode.com/problems/first-bad-version/
 */
 
 /**

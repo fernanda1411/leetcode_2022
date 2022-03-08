@@ -48,3 +48,13 @@ https://leetcode.com/problems/rotate-array/
 
   return nums;
 };
+
+
+
+/* Another solution */
+
+const rotate1 = (nums, k) => {
+  const times = k % nums.length;
+  const temp = nums.splice(times * -1);
+  return nums.unshift(...temp);
+};

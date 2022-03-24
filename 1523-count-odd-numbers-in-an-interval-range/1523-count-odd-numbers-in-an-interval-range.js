@@ -11,7 +11,7 @@ const countOdds = (low, high) => {
 };
 
 
-const countOdds2 = (low, high) => {
+// const countOdds2 = (low, high) => {
     // let count = 0;
 
     // for (let i = low; i <= high; i++) {
@@ -20,4 +20,4 @@ const countOdds2 = (low, high) => {
     //     }
     // }
     // return count;
-}
+// }

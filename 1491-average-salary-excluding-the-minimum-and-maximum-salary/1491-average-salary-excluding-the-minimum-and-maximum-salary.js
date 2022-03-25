@@ -3,21 +3,30 @@
  * @return {number}
  */
 const average = (salary) => {
-    let min = Infinity;
-    let max = -Infinity;
+    let min = null;
+    let max = null;
     let sum = 0;
     
     salary.forEach((sal, idx) => {
-        if (sal < min) {                   
+        if (min === null && max === null) {
             min = sal;
-        } 
-        
-        if (sal > max) {
             max = sal;
+        } else {
+            if (sal < min) {
+                if (idx > 1) {
+                    sum += min;     
+                }                    
+                min = sal;
+            } else if (sal > max) {
+                 if (idx > 1) {
+                    sum += max;    
+                 }
+                max = sal;
+            } else {
+                sum += sal;
+            }
         }
-        
-        sum += sal;
     })
     
-    return (sum - min - max) / (salary.length - 2);
+    return sum / (salary.length - 2);
 };  

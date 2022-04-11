@@ -3,14 +3,14 @@
  * @return {boolean}
  */
 const containsDuplicate = (nums) => {
-    const result = {};
+    let result = {};
     
-    for (let i = 0; i < nums.length; i++) {
-        if (result[nums[i]]) {
+    for (let num of nums) {
+        if (num in result) {
             return true;
-        } 
-        result[nums[i]] = true;
+        } else {
+            result[num] = true;
+        }
     }
-
     return false;
 };

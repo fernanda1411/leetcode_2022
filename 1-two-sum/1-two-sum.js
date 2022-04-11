@@ -7,7 +7,7 @@ const twoSum = (nums, target) => {
     const indices = {};
 
     nums.forEach((item, index) => {
-        indices[item] = index
+        indices[item] = index;
     });
 
     for (let index = 0; index < nums.length; index++) {
@@ -18,4 +18,3 @@ const twoSum = (nums, target) => {
         }
     }
 };
-
